@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экзамен ПДД Кыргызстана 2025</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'wave': 'wave 20s linear infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'float': 'float 6s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        wave: {
+                            '0%': { transform: 'translateX(0) translateY(0)' },
+                            '100%': { transform: 'translateX(-50px) translateY(-50px)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .wave-bg {
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 font-sans">
+    
+    <!-- Анимированный фон -->
+    <div class="fixed inset-0 -z-10 opacity-5">
+        <div class="absolute inset-0 wave-bg animate-wave"></div>
+        <div class="absolute inset-0 wave-bg animate-wave" style="animation-duration: 15s; opacity: 0.5; background-size: 30px 30px;"></div>
+        <div class="absolute inset-0 wave-bg animate-wave" style="animation-duration: 25s; opacity: 0.3; background-size: 70px 70px;"></div>
+    </div>
+
+    <!-- Плавающие элементы -->
+    <div class="fixed top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-float hidden lg:block"></div>
+    <div class="fixed top-60 right-10 w-16 h-16 bg-white/10 rounded-full animate-float hidden lg:block" style="animation-delay: -2s;"></div>
+    <div class="fixed bottom-20 left-20 w-12 h-12 bg-white/10 rounded-full animate-float hidden lg:block" style="animation-delay: -3.5s;"></div>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        
+        <!-- Логотип и заголовок -->
+        <div class="text-center mb-12">
+            <div class="relative inline-block mb-6">
+                <div class="w-32 h-32 bg-white/95 backdrop-blur-lg rounded-full mx-auto flex items-center justify-center shadow-2xl relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-transparent to-blue-600/20 animate-pulse-slow"></div>
+                    <i class="bi bi-car-front text-5xl text-blue-600 relative z-10"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Главная карточка -->
+        <div class="bg-white/95 backdrop-blur-xl rounded-3xl p-8 lg:p-12 mb-8 border border-white/30 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600"></div>
+            
+            <div class="text-center mb-8">
+                <h1 class="text-4xl lg:text-5xl font-black text-blue-900 mb-4 tracking-tight">
+                    Экзамен ПДД Кыргызстана
+                </h1>
+                <p class="text-xl lg:text-2xl text-slate-600 font-medium">
+                    Новые билеты 2025 года • Подготовка к экзамену в ГАИ
+                </p>
+            </div>
+
+            <!-- Информация об экзамене -->
+            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-6 lg:p-8 mb-8 border-2 border-blue-200 relative">
+                <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-blue-600 rounded-r-lg"></div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="bi bi-info-circle-fill text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Условия экзамена</h3>
+                        <p class="text-slate-700 leading-relaxed">
+                            На экзамене в ГАИ даётся <strong>20 смешанных вопросов</strong> и <strong>25 минут</strong> времени. 
+                            Допускается не более <strong>2 ошибок</strong>. Внимательно читайте каждый вопрос и все варианты ответов 
+                            для успешной сдачи экзамена.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статистика -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div class="text-3xl lg:text-4xl font-black text-blue-600 mb-2" data-count="32">0</div>
+                    <div class="text-sm lg:text-base text-slate-600 font-semibold uppercase tracking-wide">Билета</div>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div class="text-3xl lg:text-4xl font-black text-blue-600 mb-2" data-count="20">0</div>
+                    <div class="text-sm lg:text-base text-slate-600 font-semibold uppercase tracking-wide">Вопросов</div>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div class="text-3xl lg:text-4xl font-black text-blue-600 mb-2" data-count="25">0</div>
+                    <div class="text-sm lg:text-base text-slate-600 font-semibold uppercase tracking-wide">Минут</div>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div class="text-3xl lg:text-4xl font-black text-blue-600 mb-2" data-count="2">0</div>
+                    <div class="text-sm lg:text-base text-slate-600 font-semibold uppercase tracking-wide">Ошибки</div>
+                </div>
+            </div>
+
+            <!-- Кнопка случайного билета -->
+            <div class="text-center mb-10">
+                <button onclick="openRandomTicket()" 
+                        class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                    <i class="bi bi-dice-5 text-xl relative z-10"></i>
+                    <span class="relative z-10">Случайный билет</span>
+                </button>
+            </div>
+
+            <!-- Заголовок секции билетов -->
+            <div class="text-center mb-8">
+                <h2 class="text-2xl lg:text-3xl font-bold text-blue-900 mb-3">Выберите билет</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-700 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Сетка билетов -->
+            <div class="grid grid-cols-4 lg:grid-cols-8 gap-3 lg:gap-4" id="tickets-grid">
+                <!-- Генерируется JavaScript -->
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <div class="bg-white/90 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/30 shadow-lg">
+            <div class="flex items-center justify-center gap-3 mb-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                    <i class="bi bi-mortarboard-fill text-white text-sm"></i>
+                </div>
+                <strong class="text-blue-900 text-lg">Автошкола "Best Driver"</strong>
+            </div>
+            <div class="text-slate-600 leading-relaxed">
+                Официальные билеты экзамена ПДД Кыргызстана 2025<br>
+                Вопросы и поддержка: <strong class="text-blue-900">0505123553</strong>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JSON с данными билетов
+        const ticketsData = {
+            "totalTickets": 32,
+            "questionsPerTicket": 20,
+            "timeLimit": 25,
+            "maxErrors": 2,
+            "tickets": []
+        };
+
+        // Генерируем данные билетов
+        for (let i = 1; i <= ticketsData.totalTickets; i++) {
+            ticketsData.tickets.push({
+                "number": i,
+                "url": `${i}.html`,
+                "completed": false,
+                "score": null
+            });
+        }
+
+        // Функция для создания сетки билетов
+        function createTicketsGrid() {
+            const grid = document.getElementById('tickets-grid');
+            grid.innerHTML = '';
+
+            ticketsData.tickets.forEach(ticket => {
+                const ticketElement = document.createElement('a');
+                ticketElement.href = ticket.url;
+                ticketElement.className = `
+                    group relative block bg-white hover:bg-blue-50 border-3 border-blue-200 hover:border-blue-500 
+                    rounded-2xl p-4 lg:p-6 text-center transition-all duration-300 hover:scale-110 hover:shadow-xl 
+                    min-h-[80px] lg:min-h-[100px] flex items-center justify-center overflow-hidden
+                `;
+
+                ticketElement.innerHTML = `
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50/0 via-blue-50/50 to-blue-50/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative z-10 text-2xl lg:text-3xl font-black text-blue-800 group-hover:text-blue-900 transition-colors duration-300">
+                        ${ticket.number}
+                    </div>
+                `;
+
+                // Добавляем анимацию появления с задержкой
+                ticketElement.style.opacity = '0';
+                ticketElement.style.transform = 'translateY(20px)';
+                ticketElement.style.transition = `opacity 0.6s ease ${ticket.number * 0.03}s, transform 0.6s ease ${ticket.number * 0.03}s`;
+
+                grid.appendChild(ticketElement);
+            });
+        }
+
+        // Функция для случайного билета
+        function openRandomTicket() {
+            const randomNumber = Math.floor(Math.random() * ticketsData.totalTickets) + 1;
+            window.location.href = `${randomNumber}.html`;
+        }
+
+        // Анимация счетчиков
+        function animateCounters() {
+            document.querySelectorAll('[data-count]').forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    counter.textContent = Math.floor(current);
+                }, 30);
+            });
+        }
+
+        // Анимация появления билетов
+        function animateTickets() {
+            setTimeout(() => {
+                document.querySelectorAll('#tickets-grid a').forEach(ticket => {
+                    ticket.style.opacity = '1';
+                    ticket.style.transform = 'translateY(0)';
+                });
+            }, 100);
+        }
+
+        // Intersection Observer для анимаций при скролле
+        function setupScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.hasAttribute('data-count')) {
+                            animateCounters();
+                            observer.unobserve(entry.target);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('[data-count]').forEach(el => {
+                observer.observe(el.parentElement);
+            });
+        }
+
+        // Добавляем эффекты наведения для карточек статистики
+        function setupHoverEffects() {
+            document.querySelectorAll('[data-count]').forEach(counter => {
+                const card = counter.parentElement;
+                
+                card.addEventListener('mouseenter', () => {
+                    counter.style.transform = 'scale(1.1)';
+                    counter.style.transition = 'transform 0.3s ease';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    counter.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        // Функция для добавления клавиатурных сокращений
+        function setupKeyboardShortcuts() {
+            document.addEventListener('keydown', (e) => {
+                // Нажатие R для случайного билета
+                if (e.key.toLowerCase() === 'r' && !e.ctrlKey && !e.altKey) {
+                    openRandomTicket();
+                }
+                
+                // Нажатие цифр 1-9 для быстрого перехода к билету
+                if (e.key >= '1' && e.key <= '9' && !e.ctrlKey && !e.altKey) {
+                    const ticketNumber = parseInt(e.key);
+                    if (ticketNumber <= ticketsData.totalTickets) {
+                        window.location.href = `${ticketNumber}.html`;
+                    }
+                }
+            });
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            createTicketsGrid();
+            setupScrollAnimations();
+            setupHoverEffects();
+            setupKeyboardShortcuts();
+            animateTickets();
+            
+            // Запускаем анимацию счетчиков сразу, если они видны
+            setTimeout(() => {
+                const firstCounter = document.querySelector('[data-count]');
+                if (firstCounter && firstCounter.getBoundingClientRect().top < window.innerHeight) {
+                    animateCounters();
+                }
+            }, 500);
+        });
+
+        // Добавляем эффект ripple для кнопки случайного билета
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.querySelector('button[onclick="openRandomTicket()"]');
+            
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('absolute', 'rounded-full', 'bg-white/30', 'pointer-events-none', 'animate-ping');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+    </script>
+</body>
+</html>
